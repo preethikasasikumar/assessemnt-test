@@ -37,3 +37,39 @@ public class Main
         System.out.println("Happy counting :" + hcount);
 	}
 }
+////////////////////////////////////////////////////////////////////////////////
+LAST ELEMENT IN SERIES 
+import java.util.Scanner;
+
+public class SimpleSeriesNext {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // AP
+        System.out.println("Enter first number of AP:");
+        int a1 = sc.nextInt();
+        System.out.println("Enter second number of AP:");
+        int a2 = sc.nextInt();
+        System.out.println("Enter last number of AP:");
+        int aLast = sc.nextInt();
+
+        int diff = a2 - a1;
+        int nextAP = aLast + diff;
+        System.out.println("Next number in AP: " + nextAP);
+
+        // GP
+        System.out.println("\nEnter first number of GP:");
+        int g1 = sc.nextInt();
+        System.out.println("Enter second number of GP:");
+        int g2 = sc.nextInt();
+        System.out.println("Enter last number of GP:");
+        int gLast = sc.nextInt();
+
+        int ratio = g2 / g1;
+        int nextGP = gLast * ratio;
+        System.out.println("Next number in GP: " + nextGP);
+
+        sc.close();
+    }
+}
+
