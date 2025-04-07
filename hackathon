@@ -1,0 +1,39 @@
+HAPPY CODING
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int m1 = scanner.nextInt();
+        int m2 = scanner.nextInt();
+        int happycount = 0;
+        int codecount=0;
+        int hcount=0;
+        for(int i = 1 ; i <= n ; i++){
+            
+            if(i % m1== 0 && i % m2 != 0){
+                System.out.print("Happy");
+                happycount++;
+            }
+            if(i % m2 == 0 && i % m1 != 0){
+                System.out.print("Coding");
+                codecount++;
+            }
+            if(i % m1 == 0 && i % m2 == 0){
+                hcount++;
+            }
+            if(i % m1 == 0){
+                continue;
+            }
+            if(i % m2 == 0){
+                continue;
+            }
+            System.out.print(i+" ");
+        }
+        System.out.println();
+        System.out.println("Happy count :" + happycount);
+        System.out.println("Codecount :" + codecount);
+        System.out.println("Happy counting :" + hcount);
+	}
+}
