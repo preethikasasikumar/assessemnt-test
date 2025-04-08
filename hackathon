@@ -72,4 +72,33 @@ public class SimpleSeriesNext {
         sc.close();
     }
 }
+/////////////////////////////////////////////////////////////////////
+BLACK THUNDER
+
+import java.util.Scanner;
+class Blackthunder{
+	public static void main(String []args){
+	Scanner scanner = new Scanner(System.in);
+	System.out.println("Enter the name : ");
+	String name = scanner.nextLine();
+	if (name.matches(".*\\d.*")) {
+            System.out.println("Invalid input");
+            return;
+        }
+	if (name.length() < 3) {  
+            System.out.println("Invalid input");
+            return;
+        }	
+	char firstChar = Character.toUpperCase(name.charAt(0));
+	char lastchar = Character.toUpperCase(name.charAt((name.length()) - 1));
+	String middlePart = name.substring(1, name.length() - 1).toUpperCase();
+	if ( (firstChar == 'B' ||  firstChar == 'L') && (lastchar == 'R' ||  lastchar == 'E') && (middlePart.contains("K"))){
+				System.out.println("Yes");
+    			}
+	else{
+		System.out.println("Invalid input");
+	}
+
+	    }
+}
 
